@@ -118,3 +118,6 @@ Snapshots
 .Python
 
 client_secrets.json
+*.xls
+*.txt
+credentials.dat
