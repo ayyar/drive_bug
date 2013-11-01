@@ -32,7 +32,6 @@ http = credentials.authorize(http)
 
 service = build('drive', 'v2', http=http)
 
-
 files = service.files().list().execute()
 
 for i in files["items"]:
@@ -41,13 +40,17 @@ for i in files["items"]:
         rev = service.revisions().get(fileId=i['id'],
                                         revisionId="head").execute()
     except Exception:
-        print "id=%.60s [SKIPPED]" % i['id']
+        #print "id=%.60s [SKIPPED]" % i['id']
         continue
 
     #status = (i["modifiedDate"] == rev['modifiedDate'])
     delta = (s2ts(i["modifiedDate"]) - s2ts(rev['modifiedDate']))
     status = (abs(delta) > 300)
-    print "id=%.60s mtime=%s rev=%r ERROR=[%r] delta=%s" % (i['id'],
+    if status is False:
+        continue
+
+    print "id=%.60s mime=%s mtime=%s rev=%r ERROR=[%r] delta=%s" % (i['id'],
+                                                         i["mimeType"],
                                                          i["modifiedDate"],
                                                          rev['modifiedDate'],
                                                          status, delta)
