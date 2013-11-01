@@ -1,0 +1,120 @@
+#basics
+bin/
+include/
+/lib/
+share/
+src/
+.gitignore.bak
+
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+/lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage*
+htmlcov/
+.tox
+nosetests.xml
+*.testok
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Heroku
+venv
+*.pyc
+.env
+
+#Code coverage
+.coverage
+
+#MacOS
+*.DS_Store*
+libpeerconnection.log
+
+#PKCS keys
+key.p12
+
+#Cscope
+cscope.files
+cscope.out
+pcscope.files
+tags
+
+#Pylint
+pylint.out
+cover
+
+#Vim
+*.swp
+*.un~
+*.swo
+
+#IDE and temporary dev files
+.idea/
+scratchpad.html
+dump.rdb
+
+#Non-website images
+static/img/ignore/
+
+tmp/
+gaslib/.gasrc.json
+
+#Generated extension files
+extension/code.js
+extension/manifest.json
+
+#Local define makefiles
+local.mk
+.env-e
+
+static/js/*.jsok
+static/js/ajs/app/js/*.jsok
+
+#Generated Javascript files
+#Stripped out in the deploy script.
+static/tjs/*.js
+
+# xcode noise
+build/*
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+*.mode1
+*.mode2v3
+*.mode1v3
+xcuserdata
+Snapshots
+ 
+# osx noise
+.DS_Store
+.svn
+.Python
+
+client_secrets.json
